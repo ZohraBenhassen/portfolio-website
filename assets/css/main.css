@@ -3907,3 +3907,17 @@ input, select, textarea {
 			}
 
 		}
+		#intro {
+			text-align: center; /* Center-aligns content in the intro section */
+		}
+		
+		.logo {
+			margin-bottom: 20px; /* Adds space below the logo */
+		}
+		
+		.logo img {
+			max-width: 150px; /* Adjust size as needed */
+			height: auto;
+			border-radius: 50%; /* Optional: Makes the image round */
+		}
+		
