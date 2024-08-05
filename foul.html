@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>End of Studies Internship at Elfouladh</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Carousel Slides */
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Navigation Styles */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-nav button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            user-select: none;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+
+        /* Hide Radio Buttons */
+        .carousel-radio {
+            display: none;
+        }
+
+        /* Slide Transitions */
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Zohra Ben Hassen</a>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <section class="wrapper style1">
+                <div class="inner">
+                    <h2>End of Studies Internship at Elfouladh</h2>
+                    
+                    <p>
+                        This project demonstrates my adeptness in managing complex web development projects, 
+                        integrating cutting-edge technologies, and delivering impactful solutions in e-commerce and decision support systems.
+                         It underscores my commitment to leveraging technology to drive business growth and enhance user experience through innovative,
+                         data-driven solutions
+                    </p>
+                    <p>Technologies:</p>
+                    <p> Django, PostgreSQL, Apache Airflow, Power BI, UML, Dialogflow, Kommunicate</p>
+
+                    <!-- Carousel -->
+                    <div class="carousel-container">
+                        <!-- Slides -->
+                        <div class="carousel-slides">
+                            <div class="carousel-slide"><img src="images/ca.png" alt="Project Image 1"></div>
+                            <div class="carousel-slide"><img src="images/cmd_pass.png" alt="Project Image 2"></div>
+                            <div class="carousel-slide"><img src="images/prediction.jpeg" alt="Project Image 3"></div>
+                            <div class="carousel-slide"><img src="images/qu_vendu.jpeg" alt="Project Image 4"></div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="carousel-nav">
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <!-- Add Videos -->
+                    <h3>Project Videos</h3>
+                    <div class="videos">
+                        <iframe width="560" height="315" src="images/vid1.mp4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>&copy; 2024 Zohra Ben Hassen. All rights reserved.</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for carousel functionality
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const slides = document.querySelector('.carousel-slides');
+        let index = 0;
+
+        function updateSlide() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : slides.children.length - 1;
+            updateSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index < slides.children.length - 1) ? index + 1 : 0;
+            updateSlide();
+        });
+    </script>
+</body>
+</html>
